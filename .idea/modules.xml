@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AccountService/AccountService.iml" filepath="$PROJECT_DIR$/AccountService/AccountService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eureka-server/eureka-server.iml" filepath="$PROJECT_DIR$/eureka-server/eureka-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/NotificationService/notification-service.iml" filepath="$PROJECT_DIR$/NotificationService/notification-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/UserAuthentication/user-authentication.iml" filepath="$PROJECT_DIR$/UserAuthentication/user-authentication.iml" />
+    </modules>
+  </component>
+</project>

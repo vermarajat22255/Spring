@@ -21,18 +21,18 @@ import java.util.Properties;
 public class CallNotificationService {
     @Autowired
     RestTemplate restClient;
-
+    @Value("${NotificationController.CreateNotification}")
+    String url;
 
     public void createNotification(Notification notification){
 //        Properties prop = new Properties();
 //        String propFileName = "src/main/resources/Configurations.properties";
 //        InputStream inputStream = getClass().getClassLoader().getResourceAsStream(propFileName);
 //        String url = prop.getProperty("NotificationController.CreateNotification");
-
-        Long id = restClient.postForObject("http://localhost:8085/notification/", notification, Long.class);
+        Long id = restClient.postForObject(url, notification, Long.class);
         System.out.println("Created a notification"+ id);
     }
     public NotificationResponse getNotifications(String userId){
-        return restClient.getForObject("http://localhost:8085/notification/"+userId, NotificationResponse.class);
+        return restClient.getForObject(url+userId, NotificationResponse.class);
     }
 }

@@ -7,5 +7,6 @@ import org.springframework.stereotype.Repository;
 // find by user Email -- by annotation, by sql query
 @Repository
 public interface UserRepository extends JpaRepository<UserEntity, String> {
-
+    //          Composite search find by username and useremail
+    //        UserEntity findByUsernameAndUserEmail(username, useremail);
 }

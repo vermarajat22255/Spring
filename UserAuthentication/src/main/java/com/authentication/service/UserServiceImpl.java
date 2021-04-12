@@ -26,4 +26,9 @@ public class UserServiceImpl implements UserService{
         userRepository.save(user);
 //        callNotificationService.createNotification(new Notification(userEntity.getUserId(), userEntity.getEmailId(),"Create", "Create user event", "Success"));
     }
+
+    @Override
+    public void deleteUser(String userName) {
+        userRepository.deleteByUsername(userName);
+    }
 }

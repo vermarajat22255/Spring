@@ -8,4 +8,5 @@ import org.springframework.stereotype.Service;
 public interface UserService {
     public UserDetails getUser(String userName);
     public void createUser(UserEntity userEntity);
+    public void deleteUser(String userName);
 }

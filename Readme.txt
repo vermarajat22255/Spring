@@ -68,17 +68,23 @@ authUser(username, password) -->
 --Monitor health of the UserAuthentication at -
 localhost:8087/actuator
 localhost:8087/actuator/health
+
+------------------------- Done ---------------------------------------
+Eureka
+Transaction Rollback on failure, Commit, -- used @Transactional on ServiceImpl
+Logger -- executed on individual classes
+Filter(Authentication) -- on conditions
+
 --------------------------- To do --------------------------------------------
-Jenkins
-Transaction Rollback on failure, Commit, -- lifecycle
-JPA Interface injection
-Logger
-Filter(Authentication), interceptor(used for header validations) // before Controller is invoked
+
+-- Jenkins
+-- Spring Batch
+-- RabitMQ
+
+Interceptor(used for header validations) // before Controller is invoked
 Custom query
-ExceptionHandler (Response), RequestValidation(Request), DatabaseValidation(Not null ...)
-Transaction +,-
+ExceptionHandler (Response), RequestValidation(Request), DatabaseValidation(Not null, username different )
 Swagger(OpenAPI documentation)
-Edureka
 Notification(Messaging)
 Lazy Initialization
-Spring Batch
+Transaction +,-

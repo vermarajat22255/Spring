@@ -19,4 +19,10 @@ public class UserEntity {
     private String emailId;
     private String username;
     private String password;
+
+    public UserEntity(String emailId, String username, String password) {
+        this.emailId = emailId;
+        this.username = username;
+        this.password = password;
+    }
 }

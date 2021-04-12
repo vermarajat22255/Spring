@@ -13,17 +13,17 @@ public class AuthConfig implements CommandLineRunner {
 
     public void run(String... args) throws Exception {
         UserEntity user = new UserEntity(1l, "abc@gmail.com", "abc", "123@xyz");
-        userService.createUser(user);
+//        userService.createUser(user);
         user = new UserEntity(2l, "xyz@gmail.com", "xyz", "123@xyz");
-        userService.createUser(user);
+//        userService.createUser(user);
 
         user = new UserEntity(3l, "jkh@gmail.com", "jhk", "jkh@xyz");
-        userService.createUser(user);
+//        userService.createUser(user);
 
         user = new UserEntity(4l, "thx@gmail.com", "thx", "thx@xyz");
-        userService.createUser(user);
+//        userService.createUser(user);
 
-        System.out.println(userService.getUser("xyz").getPassword());
+//        System.out.println(userService.getUser("xyz").getPassword());
 
     }
 }

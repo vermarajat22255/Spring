@@ -11,35 +11,22 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.web.client.RestTemplateBuilder;
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
 import org.springframework.core.annotation.Order;
 import org.springframework.web.client.RestTemplate;
 
+// config files got called first and commandline configurations are called later
 @Configuration
-public class SpringConfig implements CommandLineRunner {
+public class DataPopulatorConfig implements CommandLineRunner {
     @Autowired
     UserService userService;
 
-    @Bean(name = "call")
-    @Scope(value = ConfigurableBeanFactory.SCOPE_SINGLETON)
-    public CallNotificationService getCallNotificationService(){
-        return new CallNotificationService();
-    }
-    // use @Resource(name = "call") when auto-wiring
-    @Bean
-    public ModelMapper getModelMapper(){
-        return new ModelMapper();
-    }
-
-    @Bean
-    public RestTemplate getRestTemplate(RestTemplateBuilder builder){ return new RestTemplate();}
-
     @Override
-    @Order(1)
     public void run(String... args) throws Exception {
         User user = new User("1", "abc.gmail.com", "abc");
-        userService.createUser(user);
+//        userService.createUser(user);
     }
 }

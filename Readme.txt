@@ -63,11 +63,17 @@ authUser(username, password) -->
         2. TokenGenerate -- return token
     validateToken(token) -->
         return boolean based on validation logic
-
+        3. Expire --> Logout
 
 --Monitor health of the UserAuthentication at -
 localhost:8087/actuator
 localhost:8087/actuator/health
+
+---------------------- Spring Batch ----------------------------------
+ -- ItemReader --> Reads the notification from the notification db, on corresponding time intervals
+ -- ItemProcessor --> sends email notification to the entity
+ -- ItemWriter -->  mark the db record as done
+
 
 ------------------------- Done ---------------------------------------
 Eureka
@@ -88,3 +94,6 @@ Swagger(OpenAPI documentation)
 Notification(Messaging)
 Lazy Initialization
 Transaction +,-
+
+
+insert into NOTIFICATION_TABLE values(1, 'rverma2@stevens.edu', 'created', 'Create Notification', 'Pending',  CURRENT_TIMESTAMP(), 123)

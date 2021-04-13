@@ -6,6 +6,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 @SpringBootApplication
 @EnableEurekaClient
+// Enable Spring Batch Scheduling ????
 public class NotificationServiceApplication {
 
 	public static void main(String[] args) {

@@ -13,6 +13,7 @@ import java.util.Date;
 @Entity(name = "Notification_Table")
 public class NotificationEntity {
     @Id
+    @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long notificationId;
     private String userId;

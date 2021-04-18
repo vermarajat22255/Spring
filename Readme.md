@@ -85,7 +85,17 @@ Filter(Authentication) -- on conditions
 
 -- Jenkins
 -- Spring Batch
--- RabitMQ
+-- RabitMQ (
+	prioritize message, 
+	notifications with status failed should be delivered by message or something)
+	
+				       EMailService (create user event, status update)
+			(_mail queue_)/ 
+			/
+notification publish->(exchange)
+			\
+			(_sms queue_)\
+				 	Sms Service( transaction event, ) 
 
 Interceptor(used for header validations) // before Controller is invoked
 Custom query

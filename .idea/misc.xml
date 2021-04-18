@@ -9,6 +9,7 @@
         <option value="$PROJECT_DIR$/UserAuthentication/pom.xml" />
         <option value="$PROJECT_DIR$/edureka-server/pom.xml" />
         <option value="$PROJECT_DIR$/eureka-server/pom.xml" />
+        <option value="$PROJECT_DIR$/rabbitmq/pom.xml" />
       </list>
     </option>
   </component>
